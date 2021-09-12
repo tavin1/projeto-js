@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MuBank</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="titulo">MuBank</h1>
+        </div>
+    </header>
+        <main>
+            <section class="container">
+				<h2>Meus usuarios</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>cpf</th>
+							<th>Numero da Conta</th>
+							<th>Tipo da Conta</th>
+							<th>Função</th>
+							<th>Saldo</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-usuarios">
+                        <tr class="usuario" >
+                            <td class="nome">Paulo</td>
+							<td class="cpf">100.200.300.40</td>
+							<td class="conta">1002</td>
+							<td class="tipoConta">Corrente</td>
+							<td class="funcao">Cliente</td>
+							<td class="saldo" id="saldo">10000</td>
+						</tr>
+					</tbody>
+				</table>
+                <fieldset class="campo-de-acoes">
+                    <h2>Ações bancarias</h2>
+                    <button id="transferir"    class="botao bto-acao">Transferir </button>
+                    <button id="sacar"         class="botao bto-acao">Sacar </button>
+                    <button id="depositar"     class="botao bto-acao">Depositar </button>
+                </fieldset>   
+			</section>
+        </main>
+        
+        <section class="container">
+            <h2 id="titulo-form">Cadastrar Usuário</h2>
+            <form id="cadastrar">
+                <div class="grupo">
+                    <label for="nome">Nome:</label>
+                    <input id="nome" name="nome" type="text" class="campo campo-medio">
+                </div>
+                <div class="grupo">
+                    <label for="cpf">CPF:</label>
+                    <input id="cpf" name="cpf" type="text" class="campo campo-medio">
+                </div>
+                <div class="grupo">
+                    <label for="conta">Conta:</label>
+                    <input id="conta" name="conta" type="number" class="campo campo-medio">
+                </div>
+                <div class="grupo">
+                    <label for="tipo-conta">Tipo da conta: </label>
+                    <input type="radio" name="tipoConta" value="salario" > Conta salario <br>
+                    <input type="radio" name="tipoConta" value="corrente"> Conta Corrente <br>
+                    <input type="radio" name="tipoConta" value="empresarial"> Conta Empresarial <br>
+                    <input type="radio" name="tipoConta" value="executiva"> Conta Executiva <br>
+                </div>
+                <div class="grupo">
+                    <label for="funcao">Cadastrar Função ou Cliente: </label>
+                    <input type="radio" name="funcao" value="funcionario"> Cadastrar Funcionario <br>
+                    <input type="radio" name="funcao" value="gerente"> Cadastrar Gerente <br>
+                    <input type="radio" name="funcao" value="diretor"> Cadastrar Diretor <br> 
+                    <input type="radio" name="funcao" value="cliente"> Cadastrar Cliente <br> 
+                </div>
+
+                <button id="cadastrar-usuario" class="botao bto-principal">Cadastrar</button> 
+            </form>
+        </section>
+
+        <p>Esse arquivo .js é referente ao meu curso da alura com o node.js, irei usar ele como base para meu projeto
+            em HTML, densenvolvendo o site do MuBank</p> <br>
+    <script src="js/mubank.js"></script>
+
+</body>
+
+</html>
